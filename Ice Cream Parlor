@@ -1,0 +1,48 @@
+    
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        try
+        {
+            InputStreamReader in=new InputStreamReader(System.in);
+            BufferedReader in1=new BufferedReader(in);
+            int t=Integer.parseInt(in1.readLine());
+            for(int i=0;i<t;i++)
+            {
+                int m=Integer.parseInt(in1.readLine());
+                int n=Integer.parseInt(in1.readLine());
+                int[] ar=new int[n];
+                String[] s=in1.readLine().split(" ");
+                    
+                    for(int j=0;j<n;j++)
+                    {
+                        ar[j]=Integer.parseInt(s[j]);
+                    
+                    }
+                    
+                    for(int j=0;j<n-1;j++)
+                    {
+                     for(int h=j+1;h<n;h++)
+                     {
+                         if(m-ar[j]==ar[h])
+                         {
+                             System.out.println((j+1)+" "+(h+1));
+                             break;
+                         }
+                     }
+                    }
+            }
+           }catch(IOException e){}
+                
+    
+     
+}}
+
+
+
